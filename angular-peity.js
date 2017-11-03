@@ -45,9 +45,9 @@ var buildChartDirective = function(chartType) {
         watcher();
       });
 
-      jQuery(window).resize(function() {
-        jQuery(span).peity(chartType, options);
-      });
+      // jQuery(window).resize(function() {
+      //   jQuery(span).peity(chartType, options);
+      // });
 
     }
   };
