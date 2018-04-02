@@ -34,7 +34,9 @@ var buildChartDirective = function(chartType) {
         element[0].appendChild(span);
       }
 
-      jQuery(span).peity(chartType, options);
+      if (jQuery(span) && jQuery(span).hasOwnProperty('peity')) {
+          jQuery(span).peity(chartType, options);
+      }
 
       var watcher = scope.$watch('data', function(){
         span.textContent = scope.data.join();
